@@ -1,0 +1,37 @@
+{
+  "name": "jkt-commute-live",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Real-time Jakarta commute (TransJakarta, KRL, MRT) and weather sensor relay webapp",
+  "scripts": {
+    "dev": "concurrently -n API,WEB -c green,cyan \"tsx watch server/index.ts\" \"vite\"",
+    "build": "tsc --noEmit && tsc -p tsconfig.server.json --noEmit && vite build",
+    "start": "tsx server/index.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.511.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "ws": "^8.18.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.7",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.2",
+    "@types/leaflet": "^1.9.18",
+    "@types/node": "^22.15.18",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^4.4.1",
+    "concurrently": "^9.1.2",
+    "tailwindcss": "^4.1.7",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
